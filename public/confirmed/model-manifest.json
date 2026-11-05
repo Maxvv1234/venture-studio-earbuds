@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0.0",
+  "packageVersion": 1,
+  "projectName": "Translation Earbuds",
+  "modelName": "Translation Earbuds",
+  "modelType": "earbuds",
+  "confirmedAt": "2026-11-05T22:32:48.964Z",
+  "dimensions": {
+    "width": 121.264,
+    "height": 59,
+    "depth": 32.35,
+    "units": "mm"
+  },
+  "coordinateSystem": {
+    "upAxis": "Y",
+    "glbUnits": "meters",
+    "projectUnits": "millimeters",
+    "projectToGlbScale": 0.001
+  },
+  "preferredCamera": {
+    "projection": "perspective",
+    "position": [
+      -0.07019100055265341,
+      0.10479409958440077,
+      0.15378630912542796
+    ],
+    "target": [
+      -0.003367766618728638,
+      0.03,
+      0.004749999999999999
+    ],
+    "fov": 35,
+    "orthographicSpan": 0.06629660284940359,
+    "units": "meters"
+  },
+  "preferredBackground": "#e7e8e6",
+  "preferredLighting": "soft",
+  "description": "A charcoal charging case with a separate lid, blue spiral marks, and two curved translation earbuds. Simplified geometry interpreted from the supplied concept image; dimensions are approximate.",
+  "hotspots": [],
+  "files": {
+    "model": "model.glb",
+    "project": "project.json",
+    "preview": "preview.png",
+    "readme": "README.txt"
+  },
+  "integrity": {
+    "algorithm": "SHA-256",
+    "modelChecksum": "0e14f8dd620120f173b7f218391a0ccf26afe5bba324969260bb572694e3f60d",
+    "modelBytes": 437920
+  },
+  "meshCount": 8,
+  "limitations": [
+    "Procedural concept approximation, not measured CAD or automatic image reconstruction.",
+    "Dimensions are approximate. No manufacturing or translation performance has been validated.",
+    "MeshStandardMaterial and embedded color textures are exported; editor helpers and lights are not part of the GLB."
+  ]
+}

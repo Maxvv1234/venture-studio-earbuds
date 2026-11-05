@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://maxvv1234.github.io/venture-studio-earbuds/handoff-schema.json",
+  "title":"Venture 3D Confirmed Handoff Manifest",
+  "description":"Stable schema version 1.0.0. GLB is Y-up in meters. Dimensions are approximate millimeters. All package filenames are relative.",
+  "type":"object",
+  "required":["schemaVersion","packageVersion","projectName","modelName","modelType","confirmedAt","dimensions","coordinateSystem","preferredCamera","preferredBackground","preferredLighting","description","files","integrity","meshCount"],
+  "properties":{
+    "schemaVersion":{"const":"1.0.0"},"packageVersion":{"type":"integer","minimum":1},"projectName":{"type":"string"},"modelName":{"type":"string"},"modelType":{"type":"string"},"confirmedAt":{"type":"string","format":"date-time"},
+    "dimensions":{"type":"object","required":["width","height","depth","units"],"properties":{"width":{"type":"number","minimum":0},"height":{"type":"number","minimum":0},"depth":{"type":"number","minimum":0},"units":{"const":"mm"}}},
+    "coordinateSystem":{"type":"object","properties":{"upAxis":{"const":"Y"},"glbUnits":{"const":"meters"},"projectUnits":{"const":"millimeters"},"projectToGlbScale":{"const":0.001}}},
+    "preferredCamera":{"type":"object","required":["position","target","projection","units"],"properties":{"projection":{"enum":["perspective","orthographic"]},"position":{"type":"array","items":{"type":"number"},"minItems":3,"maxItems":3},"target":{"type":"array","items":{"type":"number"},"minItems":3,"maxItems":3},"fov":{"type":"number"},"orthographicSpan":{"type":"number"},"units":{"const":"meters"}}},
+    "preferredBackground":{"type":"string","pattern":"^#[a-fA-F0-9]{6}$"},"preferredLighting":{"enum":["soft","bright","dramatic"]},"description":{"type":"string"},"hotspots":{"type":"array"},
+    "files":{"type":"object","required":["model","project","preview","readme"],"properties":{"model":{"const":"model.glb"},"project":{"const":"project.json"},"preview":{"const":"preview.png"},"readme":{"const":"README.txt"}}},
+    "integrity":{"type":"object","required":["algorithm","modelChecksum","modelBytes"],"properties":{"algorithm":{"const":"SHA-256"},"modelChecksum":{"type":"string","pattern":"^[a-f0-9]{64}$"},"modelBytes":{"type":"integer","minimum":20}}},"meshCount":{"type":"integer","minimum":1},"limitations":{"type":"array","items":{"type":"string"}}
+  }
+}
